@@ -1,0 +1,11 @@
+<%= simple_form_for @pet do |f| %>
+
+  <%= f.input :name %>
+
+  <%= f.input :address %>
+  <div class="my-3">
+    <%= f.date_field :found_on %>
+    <%= f.select :species, collection: Pet::SPECIES %>
+    <%= f.submit class:'btn btn-primary mx-3' %>
+  </div>
+<% end %>

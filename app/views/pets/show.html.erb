@@ -5,3 +5,11 @@
 
   <p>Found at: <%= @pet.address %></p>
 </div>
+
+<div>
+  <p><%= link_to 'Back to our amazing pets', pets_path %></p>
+  <p><%= link_to "Change information about #{@pet.name}", edit_pet_path(@pet) %></p>
+  <p><%= link_to 'Remove pet from database', delete_pet_path(@pet), method: 'delete', data: { confirm: "Are you sure?" } %></p>
+
+</div>
+

@@ -3,7 +3,9 @@
 <ul>
   <% @pets.each do |pet|  %>
     <div>
-      <li> <%= pet.name %> found: <%= pet.found_days_ago %></li>
+      <li> <%= link_to pet.name, pet_path(pet) %> found: <%= pet.found_days_ago %></li>
     </div>
   <% end %>
 </ul>
+
+<%= link_to 'Add a new pet', new_pet_path %>
