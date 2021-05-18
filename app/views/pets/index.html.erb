@@ -1,0 +1,9 @@
+<h1>Here are our found pets</h1>
+
+<ul>
+  <% @pets.each do |pet|  %>
+    <div>
+      <li> <%= pet.name %> found: <%= pet.found_days_ago %></li>
+    </div>
+  <% end %>
+</ul>
